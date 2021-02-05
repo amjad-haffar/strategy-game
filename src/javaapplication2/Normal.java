@@ -9,7 +9,7 @@ package javaapplication2;
  *
  * @author denge
  */
-public class Normal implements Strategy{
+public class Normal extends Soldier{
    
 public String Ability;
 public int Power;

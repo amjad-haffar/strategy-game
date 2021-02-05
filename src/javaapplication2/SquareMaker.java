@@ -16,7 +16,7 @@ public class SquareMaker {
     Square empty;
     Square base;
     SquareMaker(){
-        this.withsol= new WithSoldier();
+        //this.withsol= new WithSoldier(new Soldier());
         this.empty= new Empty();
         this.base= new Base();
     }

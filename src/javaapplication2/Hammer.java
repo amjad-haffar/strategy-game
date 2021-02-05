@@ -9,6 +9,9 @@ package javaapplication2;
  *
  * @author denge
  */
-public interface Strategy {
-    public Strategy applyAbility();
+public class Hammer implements Strategy{
+    public int price=10;
+    public Strategy applyAbility(){
+        return this;
+    }
 }

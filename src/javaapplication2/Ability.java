@@ -10,5 +10,13 @@ package javaapplication2;
  * @author denge
  */
 public class Ability {
-    
+   private Strategy strategy;
+
+   public Ability(Strategy strategy){
+      this.strategy = strategy;
+   }
+
+   public Strategy CreateSoldier(){
+      return strategy.applyAbility();
+   }
 }

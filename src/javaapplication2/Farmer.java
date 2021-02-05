@@ -9,7 +9,7 @@ package javaapplication2;
  *
  * @author denge
  */
-public class Farmer implements Strategy{
+public class Farmer extends Soldier{
    
 public String Ability;
 public int Power;

@@ -9,7 +9,7 @@ package javaapplication2;
  *
  * @author denge
  */
-public class Lead implements Strategy{
+public class Lead extends Soldier{
 public String Ability;
 public int Power;
 public int Health;

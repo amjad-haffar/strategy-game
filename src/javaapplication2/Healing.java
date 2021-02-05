@@ -9,6 +9,10 @@ package javaapplication2;
  *
  * @author denge
  */
-public interface Strategy {
-    public Strategy applyAbility();
+public class Healing implements Strategy{
+    public int price=5;
+    public Strategy applyAbility(){
+        return this;
+    }
+    
 }

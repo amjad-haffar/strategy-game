@@ -11,7 +11,7 @@ package javaapplication2;
  */
 public class Store {
     Soldier soldier;
-    String ability;
+    Ability ability;
     void buy(Soldier type,Player p){
         boolean afford =canAfford(p,type);
         if(afford ==true){

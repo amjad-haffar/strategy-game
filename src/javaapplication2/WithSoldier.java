@@ -15,10 +15,10 @@ public class WithSoldier implements Square{
     public String type="";
     public Soldier soldier;
     int health;
-    WithSoldier(){
+    WithSoldier(Soldier s){
         this.type="withsoldier";
         this.health=10;
-     this.soldier= new Soldier(new Lead());
+     this.soldier= s;
     }
     public int getHealth(){
         return this.health;
