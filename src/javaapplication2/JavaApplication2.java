@@ -7,6 +7,7 @@ package javaapplication2;
 
 import java.util.ArrayList;
 import java.util.List;
+import javaapplication2.SquareMaker;
 
 /**
  *
@@ -19,10 +20,11 @@ public class JavaApplication2 {
      */
     public static void main(String[] args) {
         Game game= new Game();
-        for(int i=0;i<100;i++){
-            if(game.map[i][1].conquaredBy.player_name!="")
-                System.out.println(1);
-            else System.out.println(0);
+        for(int i=0;i<10;i++){
+            Player p= SquareMaker.map[i][0].getPlayer();
+            if(p.player_name=="")
+                System.out.println(0);
+            else System.out.println(1);
         }
 //        game.startGame();
     

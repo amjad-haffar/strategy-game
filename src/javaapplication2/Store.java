@@ -11,17 +11,18 @@ package javaapplication2;
  */
 public class Store {
     Soldier soldier;
+    String ability;
     void buy(Soldier type,Player p){
         boolean afford =canAfford(p,type);
         if(afford ==true){
             this.soldier=type;
-            p.player_coins-=type.price;
+            //p.player_coins-=type.;
         }
     }
     boolean canAfford(Player p,Soldier type){
-        if(p.player_coins>=type.price){
-            return true;
-        }
+//        if(p.player_coins>=type.price){
+//            return true;
+//        }
         System.out.println("you dont have enough money");
         return false;
     }
