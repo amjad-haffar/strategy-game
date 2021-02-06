@@ -11,7 +11,10 @@ package javaapplication2;
  */
 public class FlyAttack implements Strategy{
     public int price=20;
-    public Strategy applyAbility(){
-        return this;
+    public String applyAbility(){
+        return "anywhere";
+    }
+    public int getPrice(){
+        return this.price;
     }
 }

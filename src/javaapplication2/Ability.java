@@ -16,7 +16,7 @@ public class Ability {
       this.strategy = strategy;
    }
 
-   public Strategy CreateSoldier(){
+   public String CreateAbility(){
       return strategy.applyAbility();
    }
 }

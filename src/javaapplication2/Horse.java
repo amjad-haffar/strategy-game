@@ -10,16 +10,16 @@ package javaapplication2;
  * @author denge
  */
 public class Horse extends Soldier{
-   
-public String Ability;
-public  int Power;
-public int Health;
 
-   public Horse Create () {
-     Ability = "no";
- Power =30;
-Health = 30;
-return this;
+   public Horse() {
+ this.power =30;
+this.health = 30;
+this.name="horse";
+    this.Ability="";
+   }
+   public void addAbility(Strategy s){
+       this.Ability=new Ability(s).CreateAbility();
    }
 }
+
 

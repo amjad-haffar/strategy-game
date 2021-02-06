@@ -11,8 +11,11 @@ package javaapplication2;
  */
 public class Healing implements Strategy{
     public int price=5;
-    public Strategy applyAbility(){
-        return this;
+    public String applyAbility(){
+        return "Heal";
+    }
+    public int getPrice(){
+        return this.price;
     }
     
 }

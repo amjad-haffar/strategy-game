@@ -11,15 +11,14 @@ package javaapplication2;
  */
 public class Normal extends Soldier{
    
-public String Ability;
-public int Power;
-public int Health;
 
-public Normal Create () {
-     Ability ="no";
- Power =20;
-Health = 20;
-return this;
-
+public Normal() {
+ this.power =20;
+this.health = 20;
+this.name="normal";
+    this.Ability="";
+   }
+public void addAbility(Strategy s){
+       this.Ability=new Ability(s).CreateAbility();
    }
 }

@@ -10,14 +10,15 @@ package javaapplication2;
  * @author denge
  */
 public class Lead extends Soldier{
-public String Ability;
-public int Power;
-public int Health;
-public Lead Create () {
-     Ability = "";
-     Power =110;
-     Health = 110;
-     return this;
+public Lead() {
+     this.power =110;
+     this.health = 110;
+     this.name="Lead";
+    this.Ability="";
+    
+   }
+public void addAbility(Strategy s){
+       this.Ability=new Ability(s).CreateAbility();
    }
 }
 

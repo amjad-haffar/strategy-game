@@ -11,18 +11,24 @@ package javaapplication2;
  */
 public class Store {
     Soldier soldier;
-    Ability ability;
-    void buy(Soldier type,Player p){
-        boolean afford =canAfford(p,type);
+    void buySoldier(Soldier type,Player p){
+        boolean afford =canAfford(p,type.price);
         if(afford ==true){
             this.soldier=type;
-            //p.player_coins-=type.;
+            p.player_coins-=type.price;
         }
     }
-    boolean canAfford(Player p,Soldier type){
-//        if(p.player_coins>=type.price){
-//            return true;
-//        }
+    void buyAbility(Player p,Strategy ab){
+        boolean afford =canAfford(p,ab.getPrice());
+        if(afford ==true){
+            this.soldier.Ability= ab.applyAbility();
+            p.player_coins-=ab.getPrice();
+        }
+    }
+    boolean canAfford(Player p,int price){
+        if(p.player_coins>=price){
+            return true;
+        }
         System.out.println("you dont have enough money");
         return false;
     }

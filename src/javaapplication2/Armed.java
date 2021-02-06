@@ -10,14 +10,13 @@ package javaapplication2;
  * @author denge
  */
 public class Armed extends Soldier{
-   
-public String Ability;
-public int Power;
-public int Health;
-   public Armed Create () {
-     Ability = "no";
-    Power =50;
-    Health = 50;
-return this;
+   public Armed() {
+    this.power =50;
+    this.health = 50;
+    this.name="armed";
+    this.Ability="";
+   }
+   public void addAbility(Strategy s){
+       this.Ability=new Ability(s).CreateAbility();
    }
 }

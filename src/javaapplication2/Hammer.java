@@ -11,7 +11,10 @@ package javaapplication2;
  */
 public class Hammer implements Strategy{
     public int price=10;
-    public Strategy applyAbility(){
-        return this;
+    public String applyAbility(){
+        return "kill !!";
+    }
+    public int getPrice(){
+        return this.price;
     }
 }

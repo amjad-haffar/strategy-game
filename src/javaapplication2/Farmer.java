@@ -10,15 +10,14 @@ package javaapplication2;
  * @author denge
  */
 public class Farmer extends Soldier{
-   
-public String Ability;
-public int Power;
-public int Health;
-public Farmer Create () {
-    Ability = "no";
-    Power =10;
-    Health = 10;
-    return this;
+public Farmer() {
+    this.power =10;
+    this.health = 10;
+    this.name="farmer";
+    this.Ability="";
+   }
+public void addAbility(Strategy s){
+       this.Ability=new Ability(s).CreateAbility();
    }
 }
 

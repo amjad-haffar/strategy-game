@@ -39,14 +39,11 @@ public class Game {
         }
     }
     void playturn(Player p){
+        PlayTurn turn= new PlayTurn(p);
         Scanner inputs= new Scanner(System.in);
-        System.out.println("do you want to buy? 1/yes 0/no");
-        int answare=inputs.nextInt();
-        if(answare==1){
-            System.out.println("select to buy : farmer 1 ,normal 2...");
-            Store s= new Store();
-            //Soldier soldier=new Soldier();
-            //s.buy(soldier, p);
+        if(p.player_coins!=0){
+            System.out.println("do you want to buy soldier? 1/yes 0/no");
+            turn.buy();
         }
         System.out.println("insert your move");
         String move=inputs.next();

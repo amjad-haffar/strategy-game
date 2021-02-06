@@ -10,5 +10,6 @@ package javaapplication2;
  * @author denge
  */
 public interface Strategy {
-    public Strategy applyAbility();
+    public String applyAbility();
+    public int getPrice();
 }
