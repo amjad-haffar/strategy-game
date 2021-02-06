@@ -32,8 +32,7 @@ public class PlayTurn {
     public void buy(){
         
         Scanner inputs= new Scanner(System.in);
-        int answare=inputs.nextInt();
-            if(answare==1){
+        
                 System.out.println("select to buy : farmer 1 ,normal 2,armed 3,lead 4");
                 String soldier_answare=inputs.next();
                 Store s= new Store();
@@ -59,14 +58,15 @@ public class PlayTurn {
                     if(answare2==1){
                         System.out.println("select to buy : hammer 1 ,healing 2,fly 3");
                         String ability_answare=inputs.next();
+                        Strategy ab = null;
                         if(ability_answare == "1"){
-                            Ability ab=new Ability(new Hammer());
+                            ab=new Hammer();
                         }
                         if(ability_answare == "2"){
-                            Ability ab=new Ability(new Healing());
+                            ab=new Healing();
                         }
                         if(ability_answare == "3"){
-                            Ability ab=new Ability(new FlyAttack());
+                            ab=new FlyAttack();
                         }
                         System.out.println("apply on");
                         for(int i=0; i<p.player_soldires.size();i++){
@@ -74,8 +74,9 @@ public class PlayTurn {
                                 System.out.print(" i "+p.player_soldires.get(i).name);
                             }
                         }
+                        int sss=Integer.parseInt(inputs.next());
+                        p.player_soldires.get(sss).addAbility(ab);
                     }
-                }
             }
     }
     public void move(){
